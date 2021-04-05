@@ -123,6 +123,7 @@ h2 {
           font-size: 2em;
           font-family: 'Open Sans';
           background-color: rgba(255, 255, 255, 0);
+          margin-bottom: ;
         }
 
         a:before {
@@ -186,6 +187,7 @@ h2 {
           padding-bottom: 3vmax;
           font-weight: 300;
           text-decoration: underline;
+          padding-bottom: 0;
           color: rgba(56, 122, 221, 0.479);
          }
 
@@ -212,10 +214,9 @@ h2 {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 115vh;
+        min-height: 108vh;
         display: flex;
-        flex-direction:column; 
-               
+        flex-direction:column;               
         }
       
 
@@ -227,6 +228,7 @@ h2 {
           flex-direction: column;
           justify-content: flex-end;
         }
+
 
       @media screen and (max-width: 800px) {
         .column {
