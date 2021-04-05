@@ -1,10 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+
 *{ 
   margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: 'Open Sans', sans-serif;
+}
+
+.intro {
+  background: rgba(168, 168, 168, 0.349);
+}
+
+.header{
+  animation: fadeAndScale 1.5s ease-in;
+}
+
+@keyframes fadeAndScale{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+  opacity: 0;
+}
+40%{
+  opacity:0;
+}
+100% {
+  opacity: 1;
+}
 }
 
 h1 {
@@ -12,16 +42,36 @@ h1 {
   justify-content: center;
   font-size: 3em;
   text-align: center;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: .3em;
 }
+
+
  
+h2 {
+  display:flex;
+  justify-content: center;
+  font-size: 2.5em;
+  text-align: center;
+  font-family: 'Pathway Gothic One', sans-serif;
+  line-height: 1em;
+  padding-bottom: 1vmax;
+  font-weight: 500;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: rgba(56, 122, 221, 0.479);
+}
+
  .row {
         display: flex;
         flex-wrap: wrap;
         justify-content:center;
        object-fit: contain;
+       animation: fade 2.7s ease-in;
        }
 
-      /* Create four equal columns that sits next to each other */
       .column {
         flex: 100%;
         max-width: 15%;
@@ -39,9 +89,18 @@ h1 {
           justify-content: center;
         }
 
+        .p-font {
+          font-size: .9em;
+          font-style: italic;
+          font-weight: 300;
+          animation: fade 2.7s ease-in;
+        }
+
+
         #image {
           display: block;
           max-width: 800px;
+          border-radius: 8px
         }
 
         .button-div {
@@ -55,25 +114,25 @@ h1 {
         a{
           position: relative;
           display: inline-block;
-          padding: 15px 10px;
+          padding: 1.5em 10px;
           border: 2px solid #111;
           text-transform: uppercase;
-          color: #111;
+          color: rgb(0, 0, 0);
           text-decoration: none; 
-          font-weight: 600;
-          font-size: 15px;
+          font-weight: 700;
+          font-size: 2em;
           font-family: 'Open Sans';
-          background-color: white;
+          background-color: rgba(255, 255, 255, 0);
         }
 
         a:before {
           content: ' ';          
           position: absolute; 
-          top: 6px;
+          top: 0px;
           left: -2px;
-          width: calc(100% + 5px);
-          height: calc(100% - 12px);
-          background: #fff;
+          width: calc(100% + 4px);
+          height: calc(100%);
+          background: rgba(255, 255, 255, 0.137);
           transition: 0.5s ease-in-out; 
           transform: scaleY(1);
           transition-delay: 0.5s;
@@ -88,9 +147,9 @@ h1 {
           position: absolute; 
           left: 6px;
           top: -2px;
-          height: calc(100% + 4px);
+          height: calc(100% + 5px);
           width: calc(100% - 12px);
-          background: #fff;
+          background: rgba(255, 255, 255, 0);
           transition: 0.5s ease-in-out; 
           transform: scaleX(1);
          }
@@ -100,7 +159,7 @@ h1 {
          }
 
          a:hover {
-          background-color: black;
+          background-color: rgb(0, 0, 0);
           color: white;
           transition-delay: 2s;
           transition: 2.25s ease-in-out;
@@ -111,7 +170,64 @@ h1 {
           z-index: 3;
         }
 
-      /* Responsive layout - makes a two column-layout instead of four columns */
+        #img-caption{
+         padding-top: 1vmax;
+         padding-bottom: 2vmin;
+         font-size: 85%;
+         text-align: center;
+        }
+
+        h3 {
+          font-family: 'Pathway Gothic One', sans-serif;
+          font-size: 4em;
+          letter-spacing: .15em;
+          text-transform: uppercase;
+          padding-left: 1.5vmax;;
+          padding-bottom: 3vmax;
+          font-weight: 300;
+          text-decoration: underline;
+          color: rgba(56, 122, 221, 0.479);
+         }
+
+        ul{
+          padding-left: 3vmax;
+          font-size: 2em;
+          font-family: 'Pathway Gothic One', sans-serif;
+          padding-top: 5vh;
+          
+        }
+
+        li {
+          padding-bottom: 5vmax;
+          font-size: 0.8em;
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.479);
+          position: relative;
+        }
+
+
+        .background{
+        position: relative;
+        background-image: url(../images/blackboard.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        display: flex;
+        flex-direction:column; 
+               
+        }
+      
+
+        .info{
+          position: absolute;
+          top:10%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
+
       @media screen and (max-width: 800px) {
         .column {
           flex: 50%;
@@ -119,7 +235,7 @@ h1 {
         }
       }
 
-      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
       @media screen and (max-width: 600px) {
         .column {
           flex: 100%;
